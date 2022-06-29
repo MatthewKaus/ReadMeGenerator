@@ -1,5 +1,5 @@
 {
-  "name": "readmegenerator",
+  "name": "portfoliogenerator",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^9.0.0"
+    "inquirer": "^8.2.4"
   }
 }
