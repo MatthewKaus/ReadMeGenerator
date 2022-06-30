@@ -2,6 +2,8 @@ const inquirer = require('inquirer')
 const fs = require('fs')
 const generateReadMe = require('./assets/template.js')
 
+const licenseArray = ['GPL',"Apache-2.0","MIT", "None"]
+
 const promptUser = () => {
     return inquirer.prompt([
         {
@@ -33,12 +35,12 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'installation',
-            message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running',
+            message: 'What are the steps required to install your project?',
             validate: data => {
                 if (data) {
                     return true;
                 } else {
-                    console.log('')
+                    console.log('Please provide the installation process!')
                     return false;
                 }
             }
@@ -46,12 +48,12 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'usage',
-            message: 'Provide instructions and examples for use',
+            message: 'Please provide the usage',
             validate: data => {
                 if (data) {
                     return true;
                 } else {
-                    console.log('')
+                    console.log('Please provide the usage!')
                     return false;
                 }
             }
@@ -65,7 +67,7 @@ const promptUser = () => {
                 if (data) {
                     return true;
                 } else {
-                    console.log('')
+                    console.log('Please enter the collaborators')
                     return false;
                 }
             }
@@ -73,7 +75,7 @@ const promptUser = () => {
         {
             type: 'list',
             name: 'license',
-            choices: ['bruh', 'bruh2']
+            choices: licenseArray
         },
         {
             type: 'input',

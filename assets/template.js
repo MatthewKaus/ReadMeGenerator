@@ -1,5 +1,20 @@
-function renderLicense() {
+// License
 
+
+
+
+
+
+function renderLicenseBadge() {
+
+}
+
+function renderLicenseSection(license) {
+    // if (license) { return `##` }
+}
+
+function renderLicenseLink(license) {
+    if (license === "None") { return `` } else { return `- [License](#license)` }
 }
 
 const generateReadMe = (answers) => {
@@ -13,7 +28,10 @@ ${answers.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-// - Bruh
+${renderLicenseLink(answers.license)}
+- [Features](#features)
+- [Contribute](#contribute)
+- [Tests](#tests)
 
 ## Installation
 ${answers.installation}
