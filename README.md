@@ -1,7 +1,8 @@
-# mk
+# m
+[![GPL](https://img.shields.io/badge/license-GPL-red)](https://opensource.org/licenses/gpl-license)
 
 ## Description
-mk
+m
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -12,16 +13,16 @@ mk
 - [Tests](#tests)
 
 ## Installation
-mk
+m
 
 ## Usage
-mk
+m
 
 ## Credits
-mk
+m
 
 ## License
-GPL
+This repository is licensed with GPL
 
 ## Features
 mk
