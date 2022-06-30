@@ -1,9 +1,9 @@
+// Import of libraries and template file
 const inquirer = require('inquirer')
 const fs = require('fs')
 const generateReadMe = require('./assets/template.js')
 
-const licenseArray = ['GPL',"Apache-2.0","MIT", "None"]
-
+// Inquirer prompt function
 const promptUser = () => {
     return inquirer.prompt([
         {
@@ -57,7 +57,6 @@ const promptUser = () => {
                     return false;
                 }
             }
-
         },
         {
             type: 'input',
@@ -75,7 +74,7 @@ const promptUser = () => {
         {
             type: 'list',
             name: 'license',
-            choices: licenseArray
+            choices: ['GPL', "Apache-2.0", "MIT", "None"]
         },
         {
             type: 'input',
@@ -119,17 +118,16 @@ const promptUser = () => {
     ])
 }
 
+// Initialization function
 const init = () => {
     promptUser().then(answers => {
         generateReadMe(answers)
-
-
         fs.writeFile('./README.md', generateReadMe(answers), err => {
             if (err) throw new Error(err);
-
             console.log('README is created! Check out README.md')
         })
     })
 }
 
+// Initialization call
 init()

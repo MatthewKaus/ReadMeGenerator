@@ -13,7 +13,7 @@ function renderLicenseSection(license) {
     // if (license) { return `##` }
 }
 
-function renderLicenseLink(license) {
+const renderLicenseLink = (license) => {
     if (license === "None") { return `` } else { return `- [License](#license)` }
 }
 

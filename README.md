@@ -6,7 +6,10 @@ mk
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-
+- [License](#license)
+- [Features](#features)
+- [Contribute](#contribute)
+- [Tests](#tests)
 
 ## Installation
 mk
@@ -18,7 +21,7 @@ mk
 mk
 
 ## License
-None
+GPL
 
 ## Features
 mk
