@@ -119,7 +119,14 @@ const promptUser = () => {
 
 const init = () => {
     promptUser().then(answers => {
-        console.log(answers)
+        generateReadMe(answers)
+
+
+        fs.writeFile('./README.md', generateReadMe(answers), err => {
+            if (err) throw new Error(err);
+
+            console.log('README is created! Check out README.md')
+        })
     })
 }
 
