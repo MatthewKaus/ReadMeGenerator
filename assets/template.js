@@ -5,8 +5,8 @@
 
 
 
-function renderLicenseBadge() {
-
+function renderLicenseBadge(license) {
+    // switch (license)
 }
 
 function renderLicenseSection(license) {
